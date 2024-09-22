@@ -15,7 +15,7 @@ Full configuration:
 
 ```hcl
 module "kubernetes_ingress" {
-  source = "git::https://gitlab.com/netified/terraform/kubernetes-ingress.git"
+  source = "thomas-illiet/ingress/kubernetes"
 
   ingress_name        = "my-ingress"
   service_namespace   = "my-namespace"
@@ -47,7 +47,7 @@ Minimal configuration:
 
 ```hcl
 module "kubernetes_ingress" {
-  source = "git::https://gitlab.com/netified/terraform/kubernetes-ingress.git"
+  source = "thomas-illiet/ingress/kubernetes"
 
   ingress_name      = "test"
   domain_name       = "example.com"
