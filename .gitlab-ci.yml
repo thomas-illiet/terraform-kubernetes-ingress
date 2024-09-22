@@ -1,0 +1,7 @@
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# 🛠️ Include
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+include:
+- project: 'netified/infrastructure/pipeline'
+  file: 'pipelines/terraform/.test.gitlab-ci.yml'
+  ref: main
