@@ -59,7 +59,6 @@ module "kubernetes_ingress" {
     }
   ]
 }
-
 ```
 
 ## Variables
