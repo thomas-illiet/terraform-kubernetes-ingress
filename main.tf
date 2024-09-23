@@ -1,7 +1,7 @@
 resource "kubernetes_ingress_v1" "ingress" {
   metadata {
     name      = var.ingress_name
-    namespace = var.service_namespace
+    namespace = var.namespace
     annotations = merge(
       var.annotations,
       {

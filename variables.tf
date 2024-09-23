@@ -3,7 +3,7 @@ variable "ingress_name" {
   description = "Specific name for the ingress. Defaults to service name if not provided."
 }
 
-variable "service_namespace" {
+variable "namespace" {
   type        = string
   description = "Namespace where the service is located."
 }
