@@ -6,8 +6,9 @@ This Terraform module manages Kubernetes Ingress resources using the Kubernetes 
 
 This project is automatically mirrored on GitHub for sharing via the Terraform registry. For any issues or contributions, please use the original GitLab repository.
 
-- **Original (GitLab):** [https://gitlab.com/netified/terraform/kubernetes-ingress](https://gitlab.com/netified/terraform/kubernetes-ingress)
-- **Mirror (GitHub):** [https://github.com/thomas-illiet/terraform-kubernetes-ingress](https://github.com/thomas-illiet/terraform-kubernetes-ingress)
+- **Original (GitLab):** <https://gitlab.com/netified/terraform/kubernetes-ingress>
+- **Mirror (GitHub):** <https://github.com/thomas-illiet/terraform-kubernetes-ingress>
+- **Registry:** <https://registry.terraform.io/modules/thomas-illiet/ingress/kubernetes/latest>
 
 ## Features
 
