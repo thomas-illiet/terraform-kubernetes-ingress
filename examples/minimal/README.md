@@ -5,15 +5,15 @@ Below is a simple configuration that showcases the essential parameters required
 ```
 module "kubernetes_ingress" {
   source = "thomas-illiet/ingress/kubernetes"
-  version = "1.1.0"
+  version = "1.2.0"
 
-  ingress_name      = "test"
-  domain_name       = "example.com"
-  service_namespace = "demo"
+  name      = "test"
+  domain    = "example.com"
+  namespace = "demo"
   paths = [
     {
-      service_name  = "nginx"
-      external_port = "8080"
+      service = "nginx"
+      port    = "8080"
     }
   ]
 }

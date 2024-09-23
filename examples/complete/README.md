@@ -5,24 +5,24 @@ Below is a complete example that demonstrates how to use the module with all pos
 ```
 module "kubernetes_ingress" {
   source = "thomas-illiet/ingress/kubernetes"
-  version = "1.1.0"
+  version = "1.2.0"
 
-  ingress_name       = "my-ingress"
-  service_namespace  = "my-namespace"
-  domain_name        = "example.com"
-  ingress_class_name = "nginx"
-  cluster_issuer     = "letsencrypt-prod"
-
+  name           = "my-ingress"
+  namespace      = "my-namespace"
+  domain         = "example.com"
+  class_name     = "nginx"
+  cluster_issuer = "letsencrypt-prod"
+  
   paths = [
     {
-      path          = "/app"
-      service_name  = "app-service"
-      external_port = 80
+      path    = "/app"
+      service = "app-service"
+      port    = 80
     },
     {
-      path          = "/api"
-      service_name  = "api-service"
-      external_port = 8080
+      path    = "/api"
+      service = "api-service"
+      port    = 8080
     }
   ]
 

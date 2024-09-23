@@ -1,6 +1,6 @@
 resource "kubernetes_ingress_v1" "ingress" {
   metadata {
-    name      = var.ingress_name
+    name      = var.name
     namespace = var.namespace
     annotations = merge(
       var.annotations,
@@ -12,7 +12,7 @@ resource "kubernetes_ingress_v1" "ingress" {
     )
   }
   spec {
-    ingress_class_name = var.ingress_class_name
+    ingress_class_name = var.class_name
     rule {
       http {
         dynamic "path" {
@@ -22,9 +22,9 @@ resource "kubernetes_ingress_v1" "ingress" {
             path_type = path.value.path_type
             backend {
               service {
-                name = path.value.service_name
+                name = path.value.service
                 port {
-                  number = path.value.external_port
+                  number = path.value.port
                 }
               }
             }
@@ -33,8 +33,8 @@ resource "kubernetes_ingress_v1" "ingress" {
       }
     }
     tls {
-      secret_name = var.tls != null ? var.tls : "${replace(var.domain_name, ".", "-")}-tls"
-      hosts       = [var.domain_name]
+      secret_name = var.tls != null ? var.tls : "${replace(var.domain, ".", "-")}-tls"
+      hosts       = [var.domain]
     }
   }
 }

@@ -1,4 +1,4 @@
-variable "ingress_name" {
+variable "name" {
   type        = string
   description = "Specific name for the ingress. Defaults to service name if not provided."
 }
@@ -14,13 +14,13 @@ variable "annotations" {
   default     = {}
 }
 
-variable "ingress_class_name" {
+variable "class_name" {
   type        = string
   description = "Ingress class name to use. Typically 'nginx' or 'internal-nginx'."
   default     = "internal-nginx"
 }
 
-variable "domain_name" {
+variable "domain" {
   type        = string
   description = "Global domain name for the ingress URLs (e.g., 'example.com')."
   default     = "example.com"
