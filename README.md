@@ -2,6 +2,13 @@
 
 This Terraform module manages Kubernetes Ingress resources using the Kubernetes provider. It allows you to configure Ingress rules, TLS certificates, and service paths dynamically based on inputs, providing flexibility for different environments.
 
+## Repository
+
+This project is automatically mirrored on GitHub for sharing via the Terraform registry. For any issues or contributions, please use the original GitLab repository.
+
+- **Original (GitLab):** [https://gitlab.com/netified/terraform/kubernetes-ingress](https://gitlab.com/netified/terraform/kubernetes-ingress)
+- **Mirror (GitHub):** [https://github.com/thomas-illiet/terraform-kubernetes-ingress](https://github.com/thomas-illiet/terraform-kubernetes-ingress)
+
 ## Features
 
 * **Ingress Rules**: Easily define paths, backends, and ingress rules.
@@ -16,6 +23,7 @@ Full configuration:
 ```hcl
 module "kubernetes_ingress" {
   source = "thomas-illiet/ingress/kubernetes"
+  version = "1.0.4"
 
   ingress_name        = "my-ingress"
   service_namespace   = "my-namespace"
@@ -48,6 +56,7 @@ Minimal configuration:
 ```hcl
 module "kubernetes_ingress" {
   source = "thomas-illiet/ingress/kubernetes"
+  version = "1.0.4"
 
   ingress_name      = "test"
   domain_name       = "example.com"

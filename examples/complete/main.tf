@@ -1,5 +1,6 @@
 module "kubernetes_ingress" {
-  source = "thomas-illiet/ingress/kubernetes"
+  source  = "thomas-illiet/ingress/kubernetes"
+  version = "1.0.4"
 
   ingress_name       = "my-ingress"
   service_namespace  = "my-namespace"
