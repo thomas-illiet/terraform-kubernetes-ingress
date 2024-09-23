@@ -34,6 +34,7 @@ resource "kubernetes_ingress_v1" "ingress" {
     }
     tls {
       secret_name = var.tls != null ? var.tls : "${replace(var.domain_name, ".", "-")}-tls"
+      hosts       = [var.domain_name]
     }
   }
 }
