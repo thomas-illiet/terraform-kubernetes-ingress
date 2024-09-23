@@ -6,8 +6,8 @@ resource "kubernetes_ingress_v1" "ingress" {
       var.annotations,
       {
         "cert-manager.io/cluster-issuer" = var.cluster_issuer
-        "terrafom.io/module.source"      = local.source
-        "terrafom.io/module.version"     = local.version
+        "terraform.io/module.source"     = local.source
+        "terraform.io/module.version"    = local.version
       }
     )
   }
