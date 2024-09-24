@@ -1,6 +1,6 @@
 module "kubernetes_ingress" {
   source  = "thomas-illiet/ingress/kubernetes"
-  version = "1.2.0"
+  version = "1.2.1"
 
   name      = "test"
   domain    = "example.com"

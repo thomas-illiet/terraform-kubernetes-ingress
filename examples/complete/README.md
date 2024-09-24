@@ -5,7 +5,7 @@ Below is a complete example that demonstrates how to use the module with all pos
 ```
 module "kubernetes_ingress" {
   source = "thomas-illiet/ingress/kubernetes"
-  version = "1.2.0"
+  version = "1.2.1"
 
   name           = "my-ingress"
   namespace      = "my-namespace"

@@ -31,14 +31,14 @@ variable "paths" {
     List of paths to configure the ingress rules. Each object defines:
     - 'path': The URL path (e.g., '/api'). Defaults to '/'.
     - 'path_type': Type of the path (e.g., 'Prefix'). Defaults to 'ImplementationSpecific'.
-    - 'service_name': The service name to route to.
-    - 'external_port': The service port to target for the request.
+    - 'service': The service name to route to.
+    - 'port': The service port to target for the request.
   EOT
   type = list(object({
-    path          = optional(string, "/")
-    path_type     = optional(string, "ImplementationSpecific")
-    service_name  = string
-    external_port = number
+    path      = optional(string, "/")
+    path_type = optional(string, "ImplementationSpecific")
+    service   = string
+    port      = number
   }))
 }
 
