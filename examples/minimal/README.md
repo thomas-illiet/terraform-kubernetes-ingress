@@ -5,7 +5,7 @@ Below is a simple configuration that showcases the essential parameters required
 ```
 module "kubernetes_ingress" {
   source = "thomas-illiet/ingress/kubernetes"
-  version = "1.2.1"
+  version = "1.2.2"
 
   name      = "test"
   domain    = "example.com"

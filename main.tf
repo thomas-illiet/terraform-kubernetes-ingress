@@ -14,6 +14,7 @@ resource "kubernetes_ingress_v1" "ingress" {
   spec {
     ingress_class_name = var.class_name
     rule {
+      host = var.domain
       http {
         dynamic "path" {
           for_each = var.paths
